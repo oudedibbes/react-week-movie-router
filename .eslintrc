@@ -1,5 +1,8 @@
 {
   "globals": {
       "_": "readonly"
-  }
+  },
+  "extends": [
+    "plugin:react/recommended"
+]
 }
