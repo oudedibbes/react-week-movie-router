@@ -96,11 +96,12 @@ picture {
     padding-bottom: 0.75vh;
 
     span {
-      padding: 0.75vh 1vw;
-      margin: 0.75vh 1vw;
+      padding: 1vh .5vw;
+      margin: 0.75vh 0vw;
       background-color: dodgerblue;
       border-radius: 0.5rem;
       color: #fff;
+      font-size: .75rem;
     }
     &.column {
       flex-direction: column;
@@ -112,6 +113,8 @@ picture {
     button {
       padding: 0.75vh 1vw;
       border-radius: 0.5rem;
+      font-size: 2rem;
+      font-family: inherit;
     }
     button {
       background-color: dodgerblue;
@@ -137,6 +140,9 @@ picture {
     .movie-title {
       margin-bottom: 1rem;
       padding-bottom: 0.75vh;
+      a{
+        text-decoration: none;
+      }
     }
     .movie-poster {
     }

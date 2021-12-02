@@ -11,11 +11,12 @@ export default function MoviePage() {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch(
+      const response = await axios.get(
         `https://omdbapi.com/?apikey=bc5aa1ee&i=${imdb_id}`
-      ).then((r) => r.json());
+      );
+      //.then((r) => r.json());
 
-      setMovieData(data);
+      setMovieData(response.data);
     }
 
     fetchData();
@@ -23,7 +24,6 @@ export default function MoviePage() {
 
   return (
     <div className='main-page movie-detail'>
-      {/* <h1 className='main-page-title'>This is the MoviePage</h1> */}
       {movieData ? (
         <>
           <div className='row'>
@@ -32,7 +32,7 @@ export default function MoviePage() {
 
           <div className='row'>
             {movieData.Genre.split(', ').map((genre, index) => (
-              <span className='genre-label' key={index} className='genre'>
+              <span className='genre-label' key={index}>
                 {genre}
               </span>
             ))}

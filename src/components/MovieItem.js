@@ -4,7 +4,7 @@ export default function MovieItem({ movie }) {
     <div className='row movie-item'>
       <h4 className='movie-title'>
         <Link to={`/movie/${movie.imdbID}`}>
-          <strong>{movie.Title}</strong>
+          <span>{movie.Title}</span>
         </Link>
       </h4>
       <div className='movie-poster'>
