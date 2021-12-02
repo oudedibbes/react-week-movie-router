@@ -1,0 +1,9 @@
+http://www.omdbapi.com/?i=tt3896198&apikey=bc5aa1ee
+
+
+http://www.omdbapi.com/?s=life&apikey=bc5aa1ee
+
+
+await fetch("https://www.omdbapi.com/?s=life&apikey=bc5aa1ee").then(r => {
+  return r.json();
+});

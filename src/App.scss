@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Alatsi|Patua+One&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Alatsi', serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.App {
+  // to center the app in the middle of the page
+  max-width: 74rem;
+  margin: 0 auto;
+
+  // but add some spacing above
+  margin-top: 2rem;
+
+  // horizontal (internal) spacing
+  padding: 0 1rem;
+}
+.header {
+  padding: 2vh 2vw;
+  text-align: center;
+  border-bottom: solid 1px #000;
+  .header-title {
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh 2vw;
+  border-bottom: solid 1px #000;
+
+  .nav-link {
+    padding: 2vh 2vw;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #000;
+
+    &.active {
+      background-color: dodgerblue;
+      color: #fff;
+      border-radius: 0.5rem;
+    }
+  }
+}
+
+.main-page {
+  max-width: 74rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding: 0 1rem;
+
+  .main-page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75vh;
+
+    span {
+      padding: 0.75vh 1vw;
+      margin: 0.75vh 1vw;
+      background-color: dodgerblue;
+      border-radius: 0.5rem;
+      color: #fff;
+    }
+    &.column {
+      flex-direction: column;
+    }
+  }
+  .with-form-elements {
+    justify-content: space-evenly;
+    input,
+    button {
+      padding: 0.75vh 1vw;
+      border-radius: 0.5rem;
+    }
+    button {
+      background-color: dodgerblue;
+      color: #fff;
+      border: none;
+      
+    }
+  }
+}
+
+.movies-conntainer {
+  .title {
+    text-align: center;
+  }
+  .movie-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  .movie-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    .movie-title {
+      margin-bottom: 1rem;
+      padding-bottom: 0.75vh;
+    }
+    .movie-poster {
+    }
+  }
+}
+
+.movie-detail {
+  .movie-poster {
+    width: 33%;
+    img {
+      width: 100%;
+    }
+  }
+  .movie-caption {
+    width: 66%;
+    margin-left: 5rem;
+    h3 {
+      width: 20%;
+    }
+    p {
+      width: 80%;
+    }
+    .row {
+      align-items: baseline;
+      justify-content: flex-start;
+      text-align: left;
+    }
+    
+  }
+  .movie-info {
+    align-items: flex-start;
+  }
+}
